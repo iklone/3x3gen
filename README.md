@@ -17,4 +17,4 @@ The program will order the images by filename and place the in the configuration
 7 8 9
 ```
 
-Images other than the first 9 (alphabetically) in the directory will be ignored.
+Images other than the first 9 (alphabetically) in the directory will be ignored. Recognises .jpg, .jpeg and .png files.
