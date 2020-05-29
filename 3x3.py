@@ -12,7 +12,7 @@ def main(width, brightness):
     uWidth = sWidth + margin
 
     for file in os.listdir("."):
-        if file != 'out.png' and (file.endswith(".png") or file.endswith(".jpg")):
+        if file != 'out.png' and (file.endswith(".png") or file.endswith(".jpg") or file.endswith(".jpeg")):
             imgList.append(file)
             n += 1
             if n == 9:
