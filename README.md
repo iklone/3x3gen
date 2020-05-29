@@ -1,2 +1,2 @@
 # 3x3gen
-3x3 Generator
+A python generator for 3x3 composite images. Commonly used to collect and display a favourite list.
