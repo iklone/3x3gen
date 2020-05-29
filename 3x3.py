@@ -12,7 +12,7 @@ def main(width, brightness):
     uWidth = sWidth + margin
 
     for file in os.listdir("."):
-        if file != '3x3.png' and (file.endswith(".png") or file.endswith(".jpg")):
+        if file != 'out.png' and (file.endswith(".png") or file.endswith(".jpg")):
             imgList.append(file)
             n += 1
             if n == 9:
@@ -37,7 +37,7 @@ def main(width, brightness):
             cropped = (origHeight - origWidth) // 2
             image = image.crop((0, cropped, origWidth, cropped + origWidth))
 
-        image = image.resize((sWidth, sWidth))
+        image = image.resize((sWidth, sWidth), Image.ANTIALIAS)
 
         img.paste(image, ((x * uWidth) + margin, (y * uWidth) + margin))
 
@@ -52,4 +52,15 @@ def main(width, brightness):
     img.save('out.png')
 
 if __name__ == "__main__":
-    main(int(sys.argv[1]), int(sys.argv[2]))
+    argLen = len(sys.argv)
+    w = 1000
+    b = 0
+
+    if (argLen >= 2):
+        w = int(sys.argv[1])
+
+    if argLen == 3:
+        b = int(sys.argv[2])
+
+
+    main(w, b)
