@@ -12,7 +12,9 @@ To use the program, place the 3x3.py file in a directory/folder with the 9 image
 The program will order the images by filename and place the in the configuration:
 
 `1 2 3`
+
 `4 5 6`
+
 `7 8 9`
 
 Images other than the first 9 (alphabetically) in the directory will be ignored.
