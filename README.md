@@ -8,6 +8,17 @@ There are 2 scripts here:
 
 ## 3x3.py
 
+### Requirements
+
+For both scripts:
+
+- Python 3
+- PIL: `pip install pil`
+
+For jikan3x3.py:
+
+- jikanpy: `pip install jikanpy`
+
 ### Use
 
 To use the program, place the 3x3.py file in a directory/folder with the 9 images you want to compile. Then run from command line with 2 arguments:
