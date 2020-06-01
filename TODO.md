@@ -6,4 +6,5 @@
   - Range of years/seasons (decades)
   - MAL genre
   - MAL producer
+  - Anime type (film/ova/etc)
 - Worst grids: inverse list (only include completed?)
