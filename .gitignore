@@ -1,4 +1,6 @@
 *.png
 *.jpg
 *.jpeg
+*.ttf
+*.txt
 /imgDump
