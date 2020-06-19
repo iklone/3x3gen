@@ -2,9 +2,10 @@
 
 A python generator for 3x3 composite images. Commonly used to collect and display a favourite list.
 
-There are 2 scripts here:
+There are 3 scripts here:
 - 3x3.py: Compile 9 images into a 3x3 composite image. Details below.
 - jikan3x3.py: Grab data from a specified MyANimeList account and build a composite grid. Details below.
+- jikanman3x3.py: Uses a list pulled from a text file to build a grid using MAL images. Details below.
 
 ## 3x3.py
 
@@ -79,3 +80,42 @@ While there is nothing preventing it, grids using datapool fav only have a pool 
 
 5x5 grid of user iklone's favourite people with a grey border on a 10000x10000 pixel image:
 `python3 jikan3x3.py iklone people fav 5 10000 128`
+
+## jikanman3x3.py
+
+### Use
+
+Must be sent a plain text file containing the wanted anime, one per line without any blank lines. This file must be sent through the first argument.
+
+Arguments:
+
+1. File: Directory of text file (directory) **REQUIRED**
+2. Title: Grid title. Will be inserted above grid on image. (string)
+3. Custom matrix size: Custom matrix width. Will be automatically calculated otherwise. (integer)
+4. Image width: Width of the output image in pixels. (integer) (default 1000)
+5. Border brightness: Grey value of the border. 0 for black, 255 for white (integer) (default black)
+
+### Function
+
+The items order will be randomised, and then inserted into a grid. The size of the grid is eithe manually inputted or calculated from the floor of the square root of the number of items. This means that some items may be cut out if the given list's length isn't a square number. The items cut will be randomised each run.
+
+The grid title requires a \*.ttf file to be present in the directory. Find the truetype font of your choosing and place it into the directory you are running the script. The title's size and position is currently non-customisable. If you are having trouble here it may be easier to manually add the title afterwards in an image editor. The font I use is *VCR OSD Mono Regular*, and can be found online for free.
+
+### Examples
+
+3x3 grid of "miyazaki.txt" with title "Miyazaki Anime". Since example.txt has 10 items, and 3^2=9, one item will be randomly cut.
+`python3 jikanman3x3.py miyazaki.txt "Miyazaki Anime"`
+
+Using file "miyazaki.txt":
+```
+Spirited Away
+Ponyo
+Nausicaa
+Panda Kopanda
+Lupin III Cagliostro
+Kiki's Delivery Service
+Princess Mononoke
+Future Boy Conan
+Laputa
+Totoro
+```
