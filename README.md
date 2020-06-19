@@ -72,10 +72,10 @@ While there is nothing preventing it, grids using datapool fav only have a pool 
 ### Examples
 
 3x3 grid of user iklone's favourite characters:
-`python jikan3x3.py iklone characters`
+`python3 jikan3x3.py iklone characters`
 
 8x8 grid of user iklone's top anime from his animelist:
-`python jikan3x3.py iklone anime list 8`
+`python3 jikan3x3.py iklone anime list 8`
 
 5x5 grid of user iklone's favourite people with a grey border on a 10000x10000 pixel image:
-`python jikan3x3.py iklone people fav 5 10000 128`
+`python3 jikan3x3.py iklone people fav 5 10000 128`
