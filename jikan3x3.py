@@ -92,6 +92,7 @@ def main(username, lType, favKA, matrix, width, brightness):
     else: # if from anime/mangalist
         score = 10
         while True:
+            time.sleep(1)
             print("Score = " + str(score))
             imgList = []
             jikanGetList(username, lType, matrix, imgList, score)
