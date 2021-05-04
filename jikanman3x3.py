@@ -114,7 +114,10 @@ if __name__ == "__main__":
 
     #load help
     if (argLen == 1):
-        print("Needs file parameter")
+        print("""Welcome to 3x3gen manual edition. Use to generate anime XxXs from MAL
+Arguments:
+filename (grid title) (matrix width)(image pixel size) (border brightness) """)
+        
         quit()
 
     #load filename
