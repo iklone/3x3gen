@@ -7,18 +7,19 @@ There are 3 scripts here:
 - jikan3x3.py: Grab data from a specified MyANimeList account and build a composite grid. Details below.
 - jikanman3x3.py: Uses a list pulled from a text file to build a grid using MAL images. Details below.
 
-## 3x3.py
 
 ### Requirements
 
-For both scripts:
+For all scripts:
 
 - Python 3
 - PIL: `pip install pil`
 
-For jikan3x3.py:
+For jikan3x3.py and jikanman3x3.py:
 
 - jikanpy: `pip install jikanpy`
+
+## 3x3.py
 
 ### Use
 
